@@ -1,1 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E13 Kebabish | Authentic Kebabs & Grills</title>
+  <meta name="description" content="E13 Kebabish – Serving the most authentic, flame-grilled kebabs in town. Dine in, takeaway or order online." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="flame">🔥</div>
+    <p>E13 Kebabish</p>
+  </div>
+</div>
+
+<!-- ===== NOTIFICATION BANNER ===== -->
+<div class="top-banner" id="topBanner">
+  <span>🔥 FREE delivery on orders over £25 – Use code <strong>E13FREE</strong> at checkout!</span>
+  <button class="banner-close" onclick="document.getElementById('topBanner').remove()">×</button>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-icon">🔥</span>
+      <div>
+        <span class="logo-name">E13 Kebabish</span>
+        <span class="logo-tagline">Flame Grilled Perfection</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#specials" class="nav-link">Specials</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#order" class="nav-link btn-order">Order Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🌟 Award-Winning Restaurant</div>
+    <h1 class="hero-title">
+      Taste the<br/>
+      <span class="highlight">Fire &amp; Flavour</span><br/>
+      of E13 Kebabish
+    </h1>
+    <p class="hero-subtitle">
+      Authentic flame-grilled kebabs, wraps &amp; platters crafted with love and the finest ingredients — straight from the grill to your table.
+    </p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn btn-primary">
+        <span>Explore Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="#order" class="btn btn-secondary">
+        <span>Order Online</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="5000">0</span><span>+</span>
+        <span class="stat-label">Happy Customers</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="50">0</span><span>+</span>
+        <span class="stat-label">Menu Items</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="10">0</span><span>+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll Down</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE STRIP ===== -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>🔥 Chicken Shish</span>
+    <span>•</span>
+    <span>🥩 Lamb Kofte</span>
+    <span>•</span>
+    <span>🌯 Doner Wrap</span>
+    <span>•</span>
+    <span>🍗 Mixed Grill</span>
+    <span>•</span>
+    <span>🥗 Fresh Salads</span>
+    <span>•</span>
+    <span>🧄 Garlic Bread</span>
+    <span>•</span>
+    <span>🍟 Loaded Fries</span>
+    <span>•</span>
+    <span>🧆 Falafel</span>
+    <span>•</span>
+    <span>🔥 Chicken Shish</span>
+    <span>•</span>
+    <span>🥩 Lamb Kofte</span>
+    <span>•</span>
+    <span>🌯 Doner Wrap</span>
+    <span>•</span>
+    <span>🍗 Mixed Grill</span>
+    <span>•</span>
+    <span>🥗 Fresh Salads</span>
+    <span>•</span>
+    <span>🧄 Garlic Bread</span>
+    <span>•</span>
+    <span>🍟 Loaded Fries</span>
+    <span>•</span>
+    <span>🧆 Falafel</span>
+    <span>•</span>
+  </div>
+</div>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-stack">
+          <div class="about-img-main">
+            <div class="about-img-placeholder main-img">
+              <span class="img-emoji">🔥</span>
+              <span>Live Grill</span>
+            </div>
+          </div>
+          <div class="about-img-secondary">
+            <div class="about-img-placeholder sec-img">
+              <span class="img-emoji">👨‍🍳</span>
+              <span>Expert Chefs</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-badge-float">
+          <span class="badge-num">10+</span>
+          <span class="badge-text">Years of<br/>Excellence</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-badge">Our Story</div>
+        <h2 class="section-title">Passion on Every Plate, <span class="highlight">Fire in Every Bite</span></h2>
+        <p class="about-lead">
+          Born in the heart of E13, we started with one mission — to bring the authentic taste of the grill to every table, every time.
+        </p>
+        <p>
+          From our hand-marinated meats to our freshly baked breads and house-made sauces, every element of your meal is crafted with care. We believe great food is more than sustenance — it's a celebration.
+        </p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">🌿</div>
+            <div>
+              <strong>100% Halal</strong>
+              <p>Certified halal meat, sourced fresh daily</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🔥</div>
+            <div>
+              <strong>Flame Grilled</strong>
+              <p>Traditional charcoal grill for authentic flavour</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🌍</div>
+            <div>
+              <strong>Fresh Ingredients</strong>
+              <p>Locally sourced, never frozen, always fresh</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⭐</div>
+            <div>
+              <strong>Award Winning</strong>
+              <p>Rated #1 kebab house in E13 for 3 years</p>
+            </div>
+          </div>
+        </div>
+        <a href="#menu" class="btn btn-primary">See Our Menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU SECTION ===== -->
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Our Menu</div>
+      <h2 class="section-title">Crafted with <span class="highlight">Passion</span></h2>
+      <p class="section-subtitle">From classic kebabs to loaded wraps and platters — there's something for everyone.</p>
+    </div>
+
+    <!-- Menu Tabs -->
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="starters">Starters</button>
+      <button class="tab-btn" data-tab="kebabs">Kebabs</button>
+      <button class="tab-btn" data-tab="wraps">Wraps &amp; Burgers</button>
+      <button class="tab-btn" data-tab="platters">Platters</button>
+      <button class="tab-btn" data-tab="sides">Sides</button>
+      <button class="tab-btn" data-tab="drinks">Drinks</button>
+    </div>
+
+    <!-- Starters -->
+    <div class="menu-grid active" id="tab-starters">
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🧆</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Falafel (6 pcs)</h3>
+            <span class="price">£4.50</span>
+          </div>
+          <p>Crispy chickpea fritters served with tahini dip</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Falafel (6 pcs)', 4.50)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🥗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Hummus &amp; Pitta</h3>
+            <span class="price">£3.99</span>
+          </div>
+          <p>Creamy house-made hummus with warm pitta bread</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Hummus & Pitta', 3.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🧅</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Onion Rings</h3>
+            <span class="price">£3.50</span>
+          </div>
+          <p>Crispy golden onion rings with chipotle dip</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Onion Rings', 3.50)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card popular">
+        <div class="popular-badge">⭐ Popular</div>
+        <div class="menu-card-img"><span>🍗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Chicken Wings (8 pcs)</h3>
+            <span class="price">£7.99</span>
+          </div>
+          <p>Marinated wings grilled to perfection, served with garlic sauce</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Chicken Wings (8 pcs)', 7.99)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kebabs -->
+    <div class="menu-grid" id="tab-kebabs">
+      <div class="menu-card popular">
+        <div class="popular-badge">⭐ Popular</div>
+        <div class="menu-card-img"><span>🔥</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Chicken Shish</h3>
+            <span class="price">£11.99</span>
+          </div>
+          <p>Tender chunks of marinated chicken breast, char-grilled on skewer. Served with rice and salad.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Chicken Shish', 11.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card popular">
+        <div class="popular-badge">🔥 Chef's Pick</div>
+        <div class="menu-card-img"><span>🥩</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Lamb Kofte</h3>
+            <span class="price">£12.99</span>
+          </div>
+          <p>Seasoned minced lamb with herbs &amp; spices, grilled on skewer. Served with rice and salad.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Lamb Kofte', 12.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Chicken Doner</h3>
+            <span class="price">£9.99</span>
+          </div>
+          <p>Slow-cooked seasoned chicken doner, freshly sliced. Served with rice and salad.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Chicken Doner', 9.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🥩</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Lamb Chops</h3>
+            <span class="price">£15.99</span>
+          </div>
+          <p>Premium marinated lamb chops, flame-grilled. Served with rice and salad.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Lamb Chops', 15.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🐟</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Grilled Sea Bass</h3>
+            <span class="price">£14.99</span>
+          </div>
+          <p>Whole grilled sea bass with lemon and herbs. Served with salad and chips.</p>
+          <div class="menu-tags"><span class="tag fish">Fish</span></div>
+          <button class="add-to-cart" onclick="addToCart('Grilled Sea Bass', 14.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🔥</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Mixed Shish</h3>
+            <span class="price">£13.99</span>
+          </div>
+          <p>Chicken shish &amp; lamb kofte on one skewer. Served with rice and salad.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Mixed Shish', 13.99)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wraps & Burgers -->
+    <div class="menu-grid" id="tab-wraps">
+      <div class="menu-card popular">
+        <div class="popular-badge">⭐ Popular</div>
+        <div class="menu-card-img"><span>🌯</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Chicken Shish Wrap</h3>
+            <span class="price">£7.99</span>
+          </div>
+          <p>Grilled chicken shish in soft flatbread with salad, garlic sauce and chilli.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Chicken Shish Wrap', 7.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🌯</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Lamb Kofte Wrap</h3>
+            <span class="price">£7.99</span>
+          </div>
+          <p>Lamb kofte in soft flatbread with salad, garlic sauce and chilli.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Lamb Kofte Wrap', 7.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🌯</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Doner Wrap</h3>
+            <span class="price">£6.99</span>
+          </div>
+          <p>Freshly sliced doner in warm flatbread with salad and sauces.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Doner Wrap', 6.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍔</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Chicken Burger</h3>
+            <span class="price">£8.49</span>
+          </div>
+          <p>Grilled chicken fillet in toasted brioche bun with lettuce, tomato and house sauce.</p>
+          <div class="menu-tags"><span class="tag halal">Halal</span></div>
+          <button class="add-to-cart" onclick="addToCart('Chicken Burger', 8.49)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platters -->
+    <div class="menu-grid" id="tab-platters">
+      <div class="menu-card popular">
+        <div class="popular-badge">🔥 Best Value</div>
+        <div class="menu-card-img"><span>🍽️</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Mixed Grill Platter</h3>
+            <span class="price">£24.99</span>
+          </div>
+          <p>Chicken shish, lamb kofte, lamb chops, chicken wings with rice, salad and bread. <em>Serves 2.</em></p>
+          <div class="menu-tags"><span class="tag halal">Halal</span><span class="tag share">Sharing</span></div>
+          <button class="add-to-cart" onclick="addToCart('Mixed Grill Platter', 24.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Family Feast</h3>
+            <span class="price">£44.99</span>
+          </div>
+          <p>2× chicken shish, 2× lamb kofte, 4× lamb chops, 12 wings with rice, salad and bread. <em>Serves 4.</em></p>
+          <div class="menu-tags"><span class="tag halal">Halal</span><span class="tag share">Family</span></div>
+          <button class="add-to-cart" onclick="addToCart('Family Feast', 44.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🥗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Veggie Platter</h3>
+            <span class="price">£14.99</span>
+          </div>
+          <p>Falafel, halloumi, grilled veg skewers, hummus and pitta. <em>Serves 2.</em></p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span><span class="tag share">Sharing</span></div>
+          <button class="add-to-cart" onclick="addToCart('Veggie Platter', 14.99)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sides -->
+    <div class="menu-grid" id="tab-sides">
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍟</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Loaded Fries</h3>
+            <span class="price">£4.99</span>
+          </div>
+          <p>Crispy fries topped with cheese sauce, jalapeños and spring onion.</p>
+          <div class="menu-tags"><span class="tag veg">Vegetarian</span></div>
+          <button class="add-to-cart" onclick="addToCart('Loaded Fries', 4.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍚</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Spiced Rice</h3>
+            <span class="price">£3.49</span>
+          </div>
+          <p>Fragrant basmati rice cooked with herbs and spices.</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Spiced Rice', 3.49)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🧄</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Garlic Bread</h3>
+            <span class="price">£2.99</span>
+          </div>
+          <p>Fresh baked flatbread brushed with garlic butter.</p>
+          <div class="menu-tags"><span class="tag veg">Vegetarian</span></div>
+          <button class="add-to-cart" onclick="addToCart('Garlic Bread', 2.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🥗</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>House Salad</h3>
+            <span class="price">£3.49</span>
+          </div>
+          <p>Mixed leaves, tomato, cucumber, olives and house dressing.</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('House Salad', 3.49)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-grid" id="tab-drinks">
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🥤</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Soft Drinks</h3>
+            <span class="price">£1.99</span>
+          </div>
+          <p>Pepsi, 7Up, Tango Orange, Tango Apple – 330ml can.</p>
+          <button class="add-to-cart" onclick="addToCart('Soft Drink', 1.99)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🍋</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Fresh Lemonade</h3>
+            <span class="price">£3.49</span>
+          </div>
+          <p>Freshly squeezed lemonade with mint. Refreshing and light.</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Fresh Lemonade', 3.49)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>☕</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Turkish Tea</h3>
+            <span class="price">£1.50</span>
+          </div>
+          <p>Traditional Turkish black tea served in a tulip glass.</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Turkish Tea', 1.50)">Add to Order</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img"><span>🧃</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-header">
+            <h3>Fruit Juice</h3>
+            <span class="price">£2.49</span>
+          </div>
+          <p>Orange, mango or apple – chilled freshly pressed juice.</p>
+          <div class="menu-tags"><span class="tag veg">Vegan</span></div>
+          <button class="add-to-cart" onclick="addToCart('Fruit Juice', 2.49)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPECIALS SECTION ===== -->
+<section class="specials" id="specials">
+  <div class="container">
+    <div class="section-header light">
+      <div class="section-badge light">Today's Specials</div>
+      <h2 class="section-title">Don't Miss Our <span class="highlight-light">Daily Deals</span></h2>
+      <p class="section-subtitle light">Limited time offers — every day brings something delicious!</p>
+    </div>
+    <div class="specials-grid">
+      <div class="special-card">
+        <div class="special-icon">🌅</div>
+        <div class="special-label">Lunch Deal</div>
+        <h3>Wrap + Chips + Drink</h3>
+        <p>Any wrap, regular chips and a can of your choice</p>
+        <div class="special-price">
+          <span class="old-price">£12.97</span>
+          <span class="new-price">£9.99</span>
+        </div>
+        <span class="special-time">Mon–Fri · 12pm–3pm</span>
+        <button class="btn btn-special" onclick="addToCart('Lunch Deal', 9.99)">Grab Deal</button>
+      </div>
+      <div class="special-card featured">
+        <div class="special-ribbon">🔥 BEST DEAL</div>
+        <div class="special-icon">🍽️</div>
+        <div class="special-label">Family Friday</div>
+        <h3>Family Feast + 4 Drinks</h3>
+        <p>Our Family Feast platter plus 4 cans of your choice</p>
+        <div class="special-price">
+          <span class="old-price">£52.95</span>
+          <span class="new-price">£39.99</span>
+        </div>
+        <span class="special-time">Fridays only · All day</span>
+        <button class="btn btn-special" onclick="addToCart('Family Friday Deal', 39.99)">Grab Deal</button>
+      </div>
+      <div class="special-card">
+        <div class="special-icon">🌙</div>
+        <div class="special-label">Late Night</div>
+        <h3>Mixed Grill + Rice</h3>
+        <p>Full mixed grill platter with extra spiced rice</p>
+        <div class="special-price">
+          <span class="old-price">£28.48</span>
+          <span class="new-price">£21.99</span>
+        </div>
+        <span class="special-time">Daily · 9pm–11pm</span>
+        <button class="btn btn-special" onclick="addToCart('Late Night Deal', 21.99)">Grab Deal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Gallery</div>
+      <h2 class="section-title">Food That <span class="highlight">Speaks for Itself</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item large" data-lightbox="Chicken Shish platter, flame-grilled to perfection">
+        <div class="gallery-placeholder"><span>🔥</span><p>Chicken Shish Platter</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+      <div class="gallery-item" data-lightbox="Lamb kofte on skewer with fresh herbs">
+        <div class="gallery-placeholder"><span>🥩</span><p>Lamb Kofte</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+      <div class="gallery-item" data-lightbox="Our cosy restaurant interior">
+        <div class="gallery-placeholder"><span>🏮</span><p>Restaurant Interior</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+      <div class="gallery-item" data-lightbox="Mixed grill sharing platter">
+        <div class="gallery-placeholder"><span>🍽️</span><p>Mixed Grill Platter</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+      <div class="gallery-item" data-lightbox="Fresh ingredients prepared daily">
+        <div class="gallery-placeholder"><span>🌿</span><p>Fresh Ingredients</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+      <div class="gallery-item" data-lightbox="Our expert chef at the grill">
+        <div class="gallery-placeholder"><span>👨‍🍳</span><p>The Grill Master</p></div>
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Reviews</div>
+      <h2 class="section-title">What Our <span class="highlight">Guests Say</span></h2>
+      <div class="overall-rating">
+        <div class="stars">★★★★★</div>
+        <span class="rating-num">4.9</span>
+        <span class="rating-count">based on 450+ reviews</span>
+      </div>
+    </div>
+    <div class="reviews-slider" id="reviewsSlider">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Absolutely the best kebab house in East London. The lamb kofte is out of this world — so juicy and full of flavour. We come every Friday now!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <strong>Ahmed K.</strong>
+            <span>Verified Customer · 2 weeks ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The mixed grill platter was incredible value for money. Everything was perfectly cooked and the service was so friendly. Will definitely be back!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <strong>Sarah M.</strong>
+            <span>Verified Customer · 1 month ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I've tried many kebab places but E13 Kebabish is genuinely different. You can taste the freshness and quality in every bite. Highly recommend!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <strong>James T.</strong>
+            <span>Verified Customer · 3 weeks ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ordered the family feast for a get together — everyone was amazed. The chicken wings alone are worth the trip. Great atmosphere too!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">F</div>
+          <div>
+            <strong>Fatima R.</strong>
+            <span>Verified Customer · 1 week ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Delivery was super fast and everything arrived hot and fresh. The loaded fries are addictive! This is now our go-to takeaway in E13."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">D</div>
+          <div>
+            <strong>David L.</strong>
+            <span>Verified Customer · 5 days ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-nav">
+      <button class="review-btn prev" id="reviewPrev">&#8592;</button>
+      <div class="review-dots" id="reviewDots"></div>
+      <button class="review-btn next" id="reviewNext">&#8594;</button>
+    </div>
+    <!-- Review Form -->
+    <div class="review-form-section">
+      <h3>Leave a Review</h3>
+      <form class="review-form" id="reviewForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="star-rating" id="starRating">
+          <span data-val="1">★</span>
+          <span data-val="2">★</span>
+          <span data-val="3">★</span>
+          <span data-val="4">★</span>
+          <span data-val="5">★</span>
+        </div>
+        <textarea placeholder="Tell us about your experience..." rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER SECTION ===== -->
+<section class="order-section" id="order">
+  <div class="container">
+    <div class="order-grid">
+      <div class="order-info">
+        <div class="section-badge light">Order Online</div>
+        <h2 class="section-title light">Ready to Order? <span class="highlight-light">We've Got You</span></h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:2rem;">Choose your preferred way to order — we make it easy and fast!</p>
+        <div class="order-options">
+          <a href="tel:+442071234567" class="order-option">
+            <div class="order-opt-icon">📞</div>
+            <div>
+              <strong>Call to Order</strong>
+              <span>020 7123 4567</span>
+            </div>
+          </a>
+          <a href="#" class="order-option">
+            <div class="order-opt-icon">🏠</div>
+            <div>
+              <strong>Deliveroo</strong>
+              <span>Order via Deliveroo</span>
+            </div>
+          </a>
+          <a href="#" class="order-option">
+            <div class="order-opt-icon">🛵</div>
+            <div>
+              <strong>Just Eat</strong>
+              <span>Order via Just Eat</span>
+            </div>
+          </a>
+          <a href="#" class="order-option">
+            <div class="order-opt-icon">🍕</div>
+            <div>
+              <strong>Uber Eats</strong>
+              <span>Order via Uber Eats</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Cart -->
+      <div class="cart-box" id="cartBox">
+        <h3>Your Order</h3>
+        <div class="cart-items" id="cartItems">
+          <p class="cart-empty">No items yet — browse the menu above!</p>
+        </div>
+        <div class="cart-summary" id="cartSummary" style="display:none;">
+          <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">£0.00</span></div>
+          <div class="cart-row"><span>Delivery</span><span>£2.99</span></div>
+          <div class="cart-row total"><span>Total</span><span id="cartTotal">£0.00</span></div>
+          <button class="btn btn-primary full-width" onclick="placeOrder()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Find Us</div>
+      <h2 class="section-title">Visit <span class="highlight">E13 Kebabish</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>123 High Street<br/>Plaistow, London E13 0AB</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+442071234567">020 7123 4567</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:hello@e13kebabish.co.uk">hello@e13kebabish.co.uk</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Mon–Thu: 12pm – 11pm</p>
+            <p>Fri–Sat: 12pm – 12am</p>
+            <p>Sunday: 1pm – 10pm</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">📘 Facebook</a>
+          <a href="#" class="social-link">📸 Instagram</a>
+          <a href="#" class="social-link">🐦 Twitter</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3>Get In Touch</h3>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="e.g. John Smith" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>General Enquiry</option>
+              <option>Table Booking</option>
+              <option>Catering &amp; Events</option>
+              <option>Feedback</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">🔥</span>
+          <span>E13 Kebabish</span>
+        </div>
+        <p>Serving authentic flame-grilled kebabs and more since 2014. Quality you can taste, warmth you can feel.</p>
+        <div class="footer-social">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Menu Highlights</h4>
+        <ul>
+          <li><a href="#menu">Chicken Shish</a></li>
+          <li><a href="#menu">Lamb Kofte</a></li>
+          <li><a href="#menu">Mixed Grill</a></li>
+          <li><a href="#menu">Family Feast</a></li>
+          <li><a href="#menu">Wraps &amp; Burgers</a></li>
+          <li><a href="#menu">Veggie Options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <ul class="hours-list">
+          <li><span>Mon–Thu</span><span>12pm – 11pm</span></li>
+          <li><span>Friday</span><span>12pm – 12am</span></li>
+          <li><span>Saturday</span><span>12pm – 12am</span></li>
+          <li><span>Sunday</span><span>1pm – 10pm</span></li>
+        </ul>
+        <div class="open-status" id="openStatus"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2024 E13 Kebabish. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Allergen Info</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CART FLOATING BUTTON ===== -->
+<button class="cart-fab" id="cartFab" onclick="scrollToSection('order')">
+  🛒 <span class="cart-fab-count" id="cartFabCount">0</span>
+</button>
+
+<!-- ===== TOAST NOTIFICATION ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <div class="lightbox-content">
+    <div class="lightbox-placeholder" id="lightboxContent"></div>
+  </div>
+</div>
+
+<!-- ===== BOOKING MODAL ===== -->
+<div class="modal" id="bookingModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('bookingModal')">×</button>
+    <h2>Book a Table</h2>
+    <form class="booking-form" id="bookingForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" required />
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <select required>
+            <option>12:00 PM</option>
+            <option>12:30 PM</option>
+            <option>1:00 PM</option>
+            <option>1:30 PM</option>
+            <option>2:00 PM</option>
+            <option>6:00 PM</option>
+            <option>6:30 PM</option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+            <option>8:30 PM</option>
+            <option>9:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Guests</label>
+          <select required>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6+ Guests</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your name" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" placeholder="Your phone number" required />
+      </div>
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea rows="3" placeholder="Allergies, high chair, etc."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary full-width">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== BOOK TABLE FAB ===== -->
+<button class="book-fab" onclick="openModal('bookingModal')">
+  🍽️ Book Table
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
