@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer dark red circle -->
+  <circle cx="100" cy="100" r="98" fill="#7B1F2E" stroke="#C9A84C" stroke-width="3"/>
+  <!-- Inner red circle -->
+  <circle cx="100" cy="100" r="80" fill="#9B2335" stroke="#C9A84C" stroke-width="2"/>
+  <!-- Coffee cup saucer -->
+  <ellipse cx="100" cy="128" rx="38" ry="8" fill="#C9A84C"/>
+  <!-- Coffee cup body -->
+  <path d="M70 90 Q68 130 100 130 Q132 130 130 90 Z" fill="#F5E6C8"/>
+  <!-- Cup rim -->
+  <ellipse cx="100" cy="90" rx="30" ry="7" fill="#E8D5A3"/>
+  <!-- Coffee in cup -->
+  <ellipse cx="100" cy="90" rx="25" ry="5" fill="#6B3A2A"/>
+  <!-- Steam lines -->
+  <path d="M88 75 Q85 68 88 62 Q91 56 88 50" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M100 72 Q97 65 100 59 Q103 53 100 47" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M112 75 Q109 68 112 62 Q115 56 112 50" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cup handle -->
+  <path d="M130 100 Q148 100 148 115 Q148 130 130 130" fill="none" stroke="#C9A84C" stroke-width="4" stroke-linecap="round"/>
+  <!-- Text: Fresh Roast -->
+  <path id="topArc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
+  <text font-family="Georgia, serif" font-size="13" fill="#F5E6C8" font-weight="bold" letter-spacing="2">
+    <textPath href="#topArc" startOffset="10%">Fresh Roast</textPath>
+  </text>
+  <!-- Text: Coffee & Juice -->
+  <path id="bottomArc" d="M 28,108 A 72,72 0 0,0 172,108" fill="none"/>
+  <text font-family="Georgia, serif" font-size="12" fill="#F5E6C8" font-weight="bold" letter-spacing="1.5">
+    <textPath href="#bottomArc" startOffset="12%">Coffee &amp; Juice</textPath>
+  </text>
+</svg>

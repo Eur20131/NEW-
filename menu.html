@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Cafe Royal</title>
+  <meta name="description" content="Explore the full Cafe Royal menu – coffee, patisserie, breakfast, panini, lunch and dinner." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.svg" alt="Cafe Royal Logo" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="brand-name">Cafe Royal</span>
+          <span class="brand-tagline">Fresh Roast Coffee &amp; Juice</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#specials" class="nav-link">Specials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html#booking" class="nav-link nav-cta">Book a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Taste &amp; Discover</p>
+      <h1>Our <span class="gold">Menu</span></h1>
+      <p style="color:rgba(255,255,255,.7);margin-top:.75rem;font-size:1.1rem">Freshly prepared, lovingly crafted – every day</p>
+    </div>
+  </div>
+
+  <!-- MENU FILTER -->
+  <div class="menu-filter-bar">
+    <div class="container">
+      <div class="menu-filter-inner">
+        <span class="filter-label">Jump to:</span>
+        <div class="filter-links">
+          <a href="#sec-coffee" class="filter-link">&#9749; Coffee</a>
+          <a href="#sec-breakfast" class="filter-link">&#127860; Breakfast</a>
+          <a href="#sec-panini" class="filter-link">&#129363; Panini &amp; Sandwiches</a>
+          <a href="#sec-mains" class="filter-link">&#127869; Mains</a>
+          <a href="#sec-patisserie" class="filter-link">&#127856; Patisserie</a>
+          <a href="#sec-drinks" class="filter-link">&#127823; Drinks</a>
+          <a href="#sec-kids" class="filter-link">&#127881; Kids</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL MENU -->
+  <main class="section">
+    <div class="container">
+
+      <!-- ALLERGEN NOTE -->
+      <div class="allergen-note" data-aos="fade-up">
+        <span>&#9432;</span>
+        <p>Please inform a member of staff of any allergies or dietary requirements before ordering. Our kitchen handles nuts, gluten, dairy and other allergens. Full allergen information available on request.</p>
+      </div>
+
+      <!-- COFFEE & HOT DRINKS -->
+      <h2 class="menu-section-title" id="sec-coffee" data-icon="&#9749;">Coffee &amp; Hot Drinks</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Espresso</h4><p>Single or double shot of our house blend</p></div>
+          <span class="price">£2.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Americano</h4><p>Espresso with hot water, served black or white</p></div>
+          <span class="price">£2.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Flat White</h4><p>Ristretto shots with velvety micro-foam</p></div>
+          <span class="price">£3.20</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Cappuccino</h4><p>Equal parts espresso, steamed milk &amp; foam</p></div>
+          <span class="price">£3.20</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Café Latte</h4><p>Double espresso with steamed milk</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Royal Latte</h4><p>Signature latte with house caramel swirl &amp; vanilla</p></div>
+          <span class="price">£3.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Macchiato</h4><p>Espresso marked with a dollop of foam</p></div>
+          <span class="price">£2.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mocha</h4><p>Espresso, chocolate, steamed milk &amp; cream</p></div>
+          <span class="price">£3.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Iced Coffee</h4><p>Cold brew over ice with choice of milk</p></div>
+          <span class="price">£4.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Royal Frappé</h4><p>Blended iced coffee, cream &amp; chocolate dust</p></div>
+          <span class="price">£4.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Chai Latte</h4><p>Spiced tea blend with steamed milk &amp; cinnamon</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Matcha Latte</h4><p>Premium ceremonial grade matcha with oat milk</p></div>
+          <span class="price">£4.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Hot Chocolate</h4><p>Belgian cocoa, steamed milk &amp; whipped cream</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Pot of Tea</h4><p>Choose from English Breakfast, Earl Grey, Green or Herbal</p></div>
+          <span class="price">£2.80</span>
+        </div>
+      </div>
+      <p class="menu-note">&#10022; Oat, almond, soy &amp; coconut milk available at no extra charge. &#10022;</p>
+
+      <!-- BREAKFAST -->
+      <h2 class="menu-section-title" id="sec-breakfast" data-icon="&#127860;">Breakfast <small style="font-size:.7em;color:var(--text-lt)">(served until 11:30am)</small></h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Full English Breakfast</h4><p>Two eggs, two rashers of bacon, two sausages, baked beans, mushrooms, grilled tomato &amp; toast</p></div>
+          <span class="price">£10.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Full Vegetarian Breakfast</h4><p>Two eggs, vegetarian sausages, mushrooms, baked beans, grilled tomato, halloumi &amp; toast</p></div>
+          <span class="price">£10.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Eggs Benedict</h4><p>Poached eggs, smoked salmon, hollandaise on English muffin</p></div>
+          <span class="price">£11.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Eggs Florentine</h4><p>Poached eggs, wilted spinach, hollandaise on English muffin</p></div>
+          <span class="price">£10.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Avocado Toast</h4><p>Smashed avocado, chilli flakes, poached egg &amp; sourdough</p></div>
+          <span class="price">£9.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Shakshuka</h4><p>Poached eggs in spiced tomato &amp; pepper sauce, feta, toasted sourdough</p></div>
+          <span class="price">£9.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Pancakes</h4><p>American-style fluffy pancakes with maple syrup &amp; berries</p></div>
+          <span class="price">£8.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Granola Bowl</h4><p>House granola, Greek yoghurt, seasonal fruit &amp; honey</p></div>
+          <span class="price">£7.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Continental Basket</h4><p>Selection of pastries, fresh fruit, yoghurt &amp; preserves</p></div>
+          <span class="price">£8.00</span>
+        </div>
+      </div>
+
+      <!-- PANINI & SANDWICHES -->
+      <h2 class="menu-section-title" id="sec-panini" data-icon="&#129363;">Panini &amp; Sandwiches</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Club Panini</h4><p>Chicken, bacon, avocado, Swiss cheese &amp; sun-dried tomato pesto</p></div>
+          <span class="price">£8.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mozzarella &amp; Tomato</h4><p>Fresh mozzarella, vine tomato, pesto &amp; rocket on ciabatta</p></div>
+          <span class="price">£7.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Tuna Melt</h4><p>Tuna mayo, cheddar, red onion &amp; gherkin</p></div>
+          <span class="price">£7.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Smoked Salmon BLT</h4><p>Smoked salmon, cream cheese, bacon, lettuce &amp; tomato on bloomer</p></div>
+          <span class="price">£9.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Brie &amp; Cranberry</h4><p>Baked brie, cranberry sauce &amp; rocket on walnut bread</p></div>
+          <span class="price">£8.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Vegan Wrap</h4><p>Hummus, roasted peppers, avocado, cucumber &amp; mixed leaves</p></div>
+          <span class="price">£8.00</span>
+        </div>
+      </div>
+      <p class="menu-note">All panini &amp; sandwiches served with house salad or crisps.</p>
+
+      <!-- MAINS -->
+      <h2 class="menu-section-title" id="sec-mains" data-icon="&#127869;">Mains – Lunch &amp; Dinner</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Garden Salad Bowl</h4><p>Seasonal leaves, roasted veg, halloumi, olives &amp; balsamic dressing</p></div>
+          <span class="price">£9.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Caesar Salad</h4><p>Romaine, croutons, parmesan, anchovies &amp; Caesar dressing – add chicken £2.50</p></div>
+          <span class="price">£9.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Royal Burger</h4><p>8oz beef patty, aged cheddar, pickles, caramelised onion &amp; house sauce</p></div>
+          <span class="price">£13.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Chicken Burger</h4><p>Crispy buttermilk chicken, slaw, pickles &amp; chipotle mayo</p></div>
+          <span class="price">£13.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Fish &amp; Chips</h4><p>Beer-battered cod, thick-cut chips, mushy peas &amp; tartar sauce</p></div>
+          <span class="price">£14.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Truffle Tagliatelle</h4><p>Fresh pasta, black truffle cream, wild mushrooms &amp; parmesan</p></div>
+          <span class="price">£15.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Margherita Pizza</h4><p>Stone-baked, San Marzano tomato, fresh mozzarella &amp; basil</p></div>
+          <span class="price">£12.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Royal Pizza</h4><p>Nduja, roasted peppers, black olives, mozzarella &amp; chilli honey</p></div>
+          <span class="price">£14.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Grilled Salmon</h4><p>Atlantic salmon, lemon butter, asparagus &amp; new potatoes</p></div>
+          <span class="price">£16.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Chicken &amp; Mushroom Risotto</h4><p>Arborio rice, roasted chicken, porcini mushrooms &amp; truffle oil</p></div>
+          <span class="price">£14.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>8oz Sirloin Steak</h4><p>Aged sirloin, hand-cut chips, grilled tomato &amp; choice of sauce</p></div>
+          <span class="price">£22.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Soup of the Day</h4><p>Ask your server for today's freshly made soup, served with artisan bread</p></div>
+          <span class="price">£6.00</span>
+        </div>
+      </div>
+
+      <!-- PATISSERIE & CAKES -->
+      <h2 class="menu-section-title" id="sec-patisserie" data-icon="&#127856;">Patisserie &amp; Cakes</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Croissant</h4><p>Butter, almond or pain au chocolat – baked fresh every morning</p></div>
+          <span class="price">£2.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Opera Cake</h4><p>Coffee buttercream &amp; dark chocolate ganache between joconde layers</p></div>
+          <span class="price">£4.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mille-Feuille</h4><p>Caramelised pastry, crème pâtissière &amp; fresh raspberry</p></div>
+          <span class="price">£5.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Chocolate Éclair</h4><p>Choux pastry, vanilla cream &amp; chocolate glaze</p></div>
+          <span class="price">£3.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Royal Cheesecake</h4><p>Baked New York style with seasonal berry compote</p></div>
+          <span class="price">£5.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Tarte au Citron</h4><p>Crisp pastry shell, lemon curd filling &amp; Italian meringue</p></div>
+          <span class="price">£4.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Danish Pastry</h4><p>Rotating selection – cinnamon swirl, apple or custard</p></div>
+          <span class="price">£3.20</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Brownie</h4><p>Dense, fudgy dark chocolate brownie with sea salt caramel</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Scone</h4><p>Traditional fruit or plain with clotted cream &amp; strawberry jam</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Slice of Cake</h4><p>Ask for today's selection – Victoria sponge, carrot, lemon drizzle &amp; more</p></div>
+          <span class="price">£4.00</span>
+        </div>
+      </div>
+
+      <!-- FRESH JUICES & DRINKS -->
+      <h2 class="menu-section-title" id="sec-drinks" data-icon="&#127823;">Fresh Juices &amp; Cold Drinks</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Orange Sunrise</h4><p>Cold-pressed orange, carrot &amp; turmeric</p></div>
+          <span class="price">£4.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Green Glow</h4><p>Spinach, cucumber, apple, lemon &amp; ginger</p></div>
+          <span class="price">£4.80</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Berry Blast Smoothie</h4><p>Mixed berries, banana, oat milk &amp; honey</p></div>
+          <span class="price">£5.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mango Lassi</h4><p>Fresh mango, yoghurt, cardamom &amp; rose water</p></div>
+          <span class="price">£4.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Watermelon Cooler</h4><p>Fresh watermelon, mint &amp; lime</p></div>
+          <span class="price">£4.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Lemonade</h4><p>Freshly squeezed with mint &amp; still or sparkling water</p></div>
+          <span class="price">£3.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Still / Sparkling Water</h4><p>Bottled mineral water</p></div>
+          <span class="price">£2.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Soft Drinks</h4><p>Coke, Diet Coke, Fanta, Sprite, J2O, etc.</p></div>
+          <span class="price">£2.50</span>
+        </div>
+      </div>
+
+      <!-- KIDS MENU -->
+      <h2 class="menu-section-title" id="sec-kids" data-icon="&#127881;">Little Royals – Kids Menu</h2>
+      <div class="full-menu-grid">
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mini Pancake Stack</h4><p>Three fluffy pancakes with strawberries &amp; chocolate sauce</p></div>
+          <span class="price">£6.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Cheese &amp; Ham Toastie</h4><p>Grilled toastie with tomato ketchup &amp; veggie sticks</p></div>
+          <span class="price">£5.50</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mini Fish &amp; Chips</h4><p>Battered fish bites with chips &amp; peas</p></div>
+          <span class="price">£7.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Pasta &amp; Tomato Sauce</h4><p>Fusilli pasta with homemade tomato sauce &amp; parmesan</p></div>
+          <span class="price">£6.00</span>
+        </div>
+        <div class="menu-item" data-aos="fade-up">
+          <div class="menu-item-info"><h4>Mini Fruit Smoothie</h4><p>Strawberry &amp; banana blended with orange juice</p></div>
+          <span class="price">£3.00</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA SECTION -->
+  <section class="newsletter bg-burgundy section" style="padding:4rem 0">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">&#127860;</div>
+        <h2>Ready to dine?</h2>
+        <p>Book your table now and let us take care of the rest.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+          <a href="contact.html#booking" class="btn btn-gold">Book a Table</a>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Cafe Royal" class="footer-logo" />
+          <p>A warm, welcoming space for coffee lovers, food enthusiasts and everyone in between.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon–Fri: 7am – 10pm</li>
+            <li>Saturday: 8am – 11pm</li>
+            <li>Sunday: 9am – 9pm</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <address>
+            <p>123 Royal Street, London</p>
+            <p><a href="tel:+442012345678">+44 (0)20 1234 5678</a></p>
+            <p><a href="mailto:hello@caferoyalcafe.co.uk">hello@caferoyalcafe.co.uk</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Cafe Royal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Royal – Fresh Roast Coffee & Juice</title>
+  <meta name="description" content="Cafe Royal – serving the finest fresh roast coffee, cakes, patisserie, breakfast, panini, lunch and dinner. A warm and welcoming cafe experience." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <img src="images/logo.svg" alt="Cafe Royal" class="preloader-logo" />
+      <div class="preloader-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header id="header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-brand" aria-label="Cafe Royal Home">
+        <img src="images/logo.svg" alt="Cafe Royal Logo" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="brand-name">Cafe Royal</span>
+          <span class="brand-tagline">Fresh Roast Coffee &amp; Juice</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="#specials" class="nav-link">Specials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html#booking" class="nav-link nav-cta">Book a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <img src="images/logo.svg" alt="Cafe Royal Badge" />
+      </div>
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Cafe <span class="gold">Royal</span></h1>
+      <p class="hero-subtitle">Where every cup tells a story of warmth, flavour &amp; passion</p>
+      <div class="hero-menu-strip">
+        <span>Coffee</span>
+        <span class="dot">·</span>
+        <span>Cake</span>
+        <span class="dot">·</span>
+        <span>Patisserie</span>
+        <span class="dot">·</span>
+        <span>Breakfast</span>
+        <span class="dot">·</span>
+        <span>Panini</span>
+        <span class="dot">·</span>
+        <span>Lunch</span>
+        <span class="dot">·</span>
+        <span>Dinner</span>
+      </div>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-gold">Explore Menu</a>
+        <a href="contact.html#booking" class="btn btn-outline">Book a Table</a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ANNOUNCEMENT TICKER ========== -->
+  <div class="ticker-wrap" aria-label="News and offers">
+    <div class="ticker">
+      <div class="ticker-inner">
+        <span>&#9749; Fresh Roast Coffee available all day</span>
+        <span>&#127881; New Seasonal Patisserie – try our Raspberry Mille-Feuille</span>
+        <span>&#127785; Weekend Brunch served 9am – 3pm</span>
+        <span>&#127857; Loyalty Card – every 10th coffee is FREE</span>
+        <span>&#127849; Happy Hour Juices – 3pm to 5pm daily</span>
+        <span>&#9749; Fresh Roast Coffee available all day</span>
+        <span>&#127881; New Seasonal Patisserie – try our Raspberry Mille-Feuille</span>
+        <span>&#127785; Weekend Brunch served 9am – 3pm</span>
+        <span>&#127857; Loyalty Card – every 10th coffee is FREE</span>
+        <span>&#127849; Happy Hour Juices – 3pm to 5pm daily</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FEATURES STRIP ========== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon">&#9749;</div>
+          <div>
+            <h3>Fresh Roast Daily</h3>
+            <p>Beans roasted in-house every morning for peak flavour</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">&#127856;</div>
+          <div>
+            <h3>Artisan Patisserie</h3>
+            <p>Hand-crafted pastries &amp; cakes baked fresh each day</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">&#127823;</div>
+          <div>
+            <h3>Fresh Juice Bar</h3>
+            <p>Cold-pressed juices &amp; smoothies made to order</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">&#127968;</div>
+          <div>
+            <h3>Cosy Atmosphere</h3>
+            <p>A warm, welcoming space to relax &amp; unwind</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap" data-aos="fade-right">
+          <div class="about-image-frame">
+            <div class="about-image-placeholder">
+              <div class="about-img-icon">&#9749;</div>
+              <p>Our Story</p>
+            </div>
+            <div class="about-badge-float">
+              <img src="images/logo.svg" alt="Cafe Royal" />
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-label">Years of passion</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="200">0</span>
+              <span class="stat-label">Menu items</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="5000">0</span>
+              <span class="stat-label">Happy guests / month</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">More than a cafe –<br /><em>a home away from home</em></h2>
+          <p class="about-lead">Cafe Royal was born from a simple belief: that great coffee, lovingly made food and a genuinely warm welcome can brighten anyone's day.</p>
+          <p>We source our single-origin beans with care, roasting them in small batches every morning so each cup is alive with flavour. Our kitchen team bakes fresh pastries, cakes and patisserie daily, using seasonal, locally sourced ingredients wherever possible.</p>
+          <p>From a solo espresso at the bar to a long, leisurely dinner with friends – Cafe Royal is your space. Pull up a chair, stay a while.</p>
+          <div class="about-signature">
+            <span class="signature-text">The Cafe Royal Team</span>
+          </div>
+          <div class="about-actions">
+            <a href="menu.html" class="btn btn-gold">View Our Menu</a>
+            <a href="contact.html" class="btn btn-ghost">Find Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU HIGHLIGHTS ========== -->
+  <section id="menu-highlights" class="menu-highlights section bg-warm">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Taste &amp; Savour</p>
+        <h2 class="section-title">Menu <span class="gold">Highlights</span></h2>
+        <p class="section-subtitle">A small taste of what awaits you</p>
+      </div>
+      <div class="menu-tabs" data-aos="fade-up">
+        <button class="menu-tab active" data-tab="coffee">Coffee</button>
+        <button class="menu-tab" data-tab="food">Food</button>
+        <button class="menu-tab" data-tab="patisserie">Patisserie</button>
+        <button class="menu-tab" data-tab="drinks">Drinks</button>
+      </div>
+      <div class="menu-panels">
+        <!-- COFFEE -->
+        <div class="menu-panel active" id="tab-coffee">
+          <div class="menu-cards">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="menu-card-emoji">&#9749;</div>
+              <h3>Espresso</h3>
+              <p>Single origin, dark roast – bold and full-bodied</p>
+              <span class="price">£2.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="menu-card-emoji">&#9749;</div>
+              <h3>Flat White</h3>
+              <p>Ristretto shots with velvety micro-foam milk</p>
+              <span class="price">£3.20</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="menu-card-emoji">&#9749;</div>
+              <h3>Cappuccino</h3>
+              <p>Classic balance of espresso, steamed milk &amp; foam</p>
+              <span class="price">£3.20</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="240">
+              <div class="menu-card-emoji">&#9749;</div>
+              <h3>Royal Latte</h3>
+              <p>Our signature latte with house caramel swirl</p>
+              <span class="price">£3.80</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="320">
+              <div class="menu-card-emoji">&#10052;</div>
+              <h3>Iced Coffee</h3>
+              <p>Cold brew over ice with oat or whole milk</p>
+              <span class="price">£4.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="menu-card-emoji">&#127866;</div>
+              <h3>Royal Frappé</h3>
+              <p>Blended iced coffee with cream &amp; chocolate dust</p>
+              <span class="price">£4.50</span>
+            </div>
+          </div>
+        </div>
+        <!-- FOOD -->
+        <div class="menu-panel" id="tab-food">
+          <div class="menu-cards">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="menu-card-emoji">&#127860;</div>
+              <h3>Full English</h3>
+              <p>Eggs, bacon, sausage, beans, toast &amp; grilled tomato</p>
+              <span class="price">£10.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="menu-card-emoji">&#129354;</div>
+              <h3>Eggs Benedict</h3>
+              <p>Poached eggs, smoked salmon, hollandaise on muffin</p>
+              <span class="price">£11.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="menu-card-emoji">&#129363;</div>
+              <h3>Club Panini</h3>
+              <p>Chicken, bacon, avocado, Swiss cheese &amp; sun-dried tomato</p>
+              <span class="price">£8.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="240">
+              <div class="menu-card-emoji">&#127793;</div>
+              <h3>Garden Salad Bowl</h3>
+              <p>Seasonal leaves, roasted veg, halloumi &amp; balsamic</p>
+              <span class="price">£9.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="320">
+              <div class="menu-card-emoji">&#127835;</div>
+              <h3>Royal Burger</h3>
+              <p>8oz beef patty, aged cheddar, pickles &amp; house sauce</p>
+              <span class="price">£13.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="menu-card-emoji">&#127829;</div>
+              <h3>Margherita Pizza</h3>
+              <p>Stone-baked, San Marzano tomato, fresh mozzarella</p>
+              <span class="price">£12.00</span>
+            </div>
+          </div>
+        </div>
+        <!-- PATISSERIE -->
+        <div class="menu-panel" id="tab-patisserie">
+          <div class="menu-cards">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="menu-card-emoji">&#127856;</div>
+              <h3>Croissant</h3>
+              <p>Buttery, flaky &amp; golden – plain, almond or chocolate</p>
+              <span class="price">£2.80</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="menu-card-emoji">&#127874;</div>
+              <h3>Opera Cake</h3>
+              <p>Layers of coffee buttercream &amp; dark chocolate ganache</p>
+              <span class="price">£4.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="menu-card-emoji">&#129361;</div>
+              <h3>Mille-Feuille</h3>
+              <p>Caramelised pastry, crème pâtissière &amp; raspberry</p>
+              <span class="price">£5.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="240">
+              <div class="menu-card-emoji">&#127870;</div>
+              <h3>Éclair</h3>
+              <p>Choux pastry filled with vanilla cream, glazed in chocolate</p>
+              <span class="price">£3.80</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="320">
+              <div class="menu-card-emoji">&#127873;</div>
+              <h3>Royal Cheesecake</h3>
+              <p>Baked New York style with berry compote</p>
+              <span class="price">£5.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="menu-card-emoji">&#127858;</div>
+              <h3>Pain au Chocolat</h3>
+              <p>Double chocolate chunk in buttery laminated dough</p>
+              <span class="price">£3.00</span>
+            </div>
+          </div>
+        </div>
+        <!-- DRINKS -->
+        <div class="menu-panel" id="tab-drinks">
+          <div class="menu-cards">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="menu-card-emoji">&#127819;</div>
+              <h3>Orange Sunrise</h3>
+              <p>Cold-pressed orange, carrot &amp; turmeric</p>
+              <span class="price">£4.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="menu-card-emoji">&#129381;</div>
+              <h3>Green Glow</h3>
+              <p>Spinach, cucumber, apple, lemon &amp; ginger</p>
+              <span class="price">£4.80</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="menu-card-emoji">&#127827;</div>
+              <h3>Berry Blast</h3>
+              <p>Mixed berries, banana, oat milk &amp; honey</p>
+              <span class="price">£5.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="240">
+              <div class="menu-card-emoji">&#127861;</div>
+              <h3>Chai Latte</h3>
+              <p>Spiced tea with steamed milk &amp; cinnamon dust</p>
+              <span class="price">£3.50</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="320">
+              <div class="menu-card-emoji">&#129381;</div>
+              <h3>Matcha Latte</h3>
+              <p>Premium ceremonial grade matcha with oat milk</p>
+              <span class="price">£4.00</span>
+            </div>
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="menu-card-emoji">&#127822;</div>
+              <h3>Mango Lassi</h3>
+              <p>Fresh mango, yoghurt, cardamom &amp; rose water</p>
+              <span class="price">£4.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta" data-aos="fade-up">
+        <a href="menu.html" class="btn btn-gold">Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DAILY SPECIALS ========== -->
+  <section id="specials" class="specials section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Today's Picks</p>
+        <h2 class="section-title">Daily <span class="gold">Specials</span></h2>
+      </div>
+      <div class="specials-grid">
+        <div class="special-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="special-ribbon">Breakfast</div>
+          <div class="special-icon">&#127860;</div>
+          <h3>Shakshuka</h3>
+          <p>Poached eggs in spiced tomato sauce with feta &amp; toasted sourdough</p>
+          <div class="special-footer">
+            <span class="price">£9.50</span>
+            <span class="special-time">Until 11:30am</span>
+          </div>
+        </div>
+        <div class="special-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="special-ribbon">Chef's Special</div>
+          <div class="special-icon">&#127869;</div>
+          <h3>Truffle Tagliatelle</h3>
+          <p>Fresh pasta, black truffle cream, parmesan &amp; wild mushrooms</p>
+          <div class="special-footer">
+            <span class="price">£15.00</span>
+            <span class="special-time">Lunch &amp; Dinner</span>
+          </div>
+        </div>
+        <div class="special-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="special-ribbon">Afternoon</div>
+          <div class="special-icon">&#127856;</div>
+          <h3>Cream Tea Set</h3>
+          <p>Scones, clotted cream, jam &amp; your choice of tea or coffee</p>
+          <div class="special-footer">
+            <span class="price">£8.00</span>
+            <span class="special-time">2pm – 5pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials section bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Kind Words</p>
+        <h2 class="section-title">What Our <span class="gold">Guests Say</span></h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonials-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"The best flat white I've had outside of Melbourne. The croissants are impossibly flaky. This is my daily ritual now!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Sarah M.</strong>
+                <span>Regular Guest</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"We celebrated our anniversary dinner here – the truffle pasta was divine and the staff made us feel so special. Can't wait to return."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">J</div>
+              <div>
+                <strong>James &amp; Priya</strong>
+                <span>Anniversary Dinner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Honestly the cosiest cafe in town. The Opera Cake is an event in itself. Staff are warm, welcoming and remember your order!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">L</div>
+              <div>
+                <strong>Laura K.</strong>
+                <span>Food Blogger</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"The freshly pressed green juice every morning sets me up perfectly. And the breakfast panini – oh my! A hidden gem."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">T</div>
+              <div>
+                <strong>Tom H.</strong>
+                <span>Loyal Customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">&#8592;</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next testimonial">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OPENING HOURS + MAP ========== -->
+  <section class="info-section section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="hours-card" data-aos="fade-right">
+          <div class="card-icon">&#128336;</div>
+          <h2>Opening Hours</h2>
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Monday – Friday</td><td>7:00am – 10:00pm</td></tr>
+              <tr><td>Saturday</td><td>8:00am – 11:00pm</td></tr>
+              <tr><td>Sunday</td><td>9:00am – 9:00pm</td></tr>
+              <tr class="special-hours"><td>Bank Holidays</td><td>10:00am – 7:00pm</td></tr>
+            </tbody>
+          </table>
+          <div class="open-now-badge" id="openNowBadge"></div>
+        </div>
+        <div class="location-card" data-aos="fade-left">
+          <div class="card-icon">&#128205;</div>
+          <h2>Find Us</h2>
+          <address>
+            <p><strong>Cafe Royal</strong></p>
+            <p>123 Royal Street</p>
+            <p>London, W1A 1AA</p>
+          </address>
+          <div class="contact-links">
+            <a href="tel:+442012345678" class="contact-link">
+              <span>&#128222;</span> +44 (0)20 1234 5678
+            </a>
+            <a href="mailto:hello@caferoyalcafe.co.uk" class="contact-link">
+              <span>&#9993;</span> hello@caferoyalcafe.co.uk
+            </a>
+          </div>
+          <a href="contact.html" class="btn btn-gold" style="margin-top:1.5rem">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter section bg-burgundy">
+    <div class="container">
+      <div class="newsletter-inner" data-aos="zoom-in">
+        <div class="newsletter-icon">&#9993;</div>
+        <h2>Stay in the Loop</h2>
+        <p>Sign up for exclusive offers, seasonal menus &amp; event invitations from Cafe Royal.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="newsletter-input-wrap">
+            <input type="email" id="newsletterEmail" placeholder="Your email address" autocomplete="email" required />
+            <button type="submit" class="btn btn-gold">Subscribe</button>
+          </div>
+          <p class="newsletter-note">No spam, ever. Unsubscribe at any time.</p>
+          <div class="newsletter-success" id="newsletterSuccess" hidden>
+            <span>&#10003;</span> Thank you! You're now on our mailing list.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Cafe Royal" class="footer-logo" />
+          <p>A warm, welcoming space for coffee lovers, food enthusiasts and everyone in between.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">&#9419;</a>
+            <a href="#" class="social-link" aria-label="Instagram">&#9413;</a>
+            <a href="#" class="social-link" aria-label="Twitter">&#9429;</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#booking">Book a Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>We Serve</h4>
+          <ul>
+            <li>Fresh Roast Coffee</li>
+            <li>Artisan Cakes</li>
+            <li>French Patisserie</li>
+            <li>Full English Breakfast</li>
+            <li>Gourmet Panini</li>
+            <li>Lunch &amp; Dinner</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <address>
+            <p>123 Royal Street</p>
+            <p>London, W1A 1AA</p>
+            <p><a href="tel:+442012345678">+44 (0)20 1234 5678</a></p>
+            <p><a href="mailto:hello@caferoyalcafe.co.uk">hello@caferoyalcafe.co.uk</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Cafe Royal. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <!-- ========== COOKIE BANNER ========== -->
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <p>We use cookies to enhance your experience. <a href="#">Learn more</a>.</p>
+    <button class="btn btn-gold btn-sm" id="cookieAccept">Accept</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

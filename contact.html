@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Book a Table – Cafe Royal</title>
+  <meta name="description" content="Get in touch with Cafe Royal or book your table online. We'd love to hear from you." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    .contact-info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .contact-info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(201,168,76,.12);
+      transition: all var(--transition);
+    }
+    .contact-info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+    .cic-icon { font-size: 2.4rem; margin-bottom: .9rem; }
+    .contact-info-card h3 {
+      font-size: 1rem;
+      color: var(--burgundy);
+      margin-bottom: .5rem;
+    }
+    .contact-info-card p, .contact-info-card a {
+      font-size: .9rem;
+      color: var(--text-lt);
+      line-height: 1.6;
+    }
+    .contact-info-card a:hover { color: var(--burgundy); }
+
+    .faq-section { margin-top: 5rem; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--gold);
+    }
+    .faq-item h4 {
+      font-size: 1rem;
+      color: var(--burgundy);
+      margin-bottom: .5rem;
+    }
+    .faq-item p {
+      font-size: .88rem;
+      color: var(--text-lt);
+      line-height: 1.6;
+    }
+
+    .booking-note {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      background: rgba(201,168,76,.1);
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin-bottom: 2rem;
+      font-size: .88rem;
+      color: var(--text-lt);
+    }
+    .booking-note span { flex-shrink: 0; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.svg" alt="Cafe Royal Logo" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="brand-name">Cafe Royal</span>
+          <span class="brand-tagline">Fresh Roast Coffee &amp; Juice</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#specials" class="nav-link">Specials</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="#booking" class="nav-link nav-cta">Book a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">We'd Love to Hear from You</p>
+      <h1>Contact <span class="gold">Us</span></h1>
+      <p style="color:rgba(255,255,255,.7);margin-top:.75rem;font-size:1.1rem">Get in touch or reserve your table</p>
+    </div>
+  </div>
+
+  <!-- CONTACT INFO CARDS -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="contact-info-cards">
+        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cic-icon">&#128205;</div>
+          <h3>Visit Us</h3>
+          <p>123 Royal Street<br />London, W1A 1AA</p>
+        </div>
+        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="cic-icon">&#128222;</div>
+          <h3>Call Us</h3>
+          <p><a href="tel:+442012345678">+44 (0)20 1234 5678</a></p>
+          <p style="margin-top:.3rem;font-size:.8rem">Mon–Fri 8am – 9pm</p>
+        </div>
+        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="cic-icon">&#9993;</div>
+          <h3>Email Us</h3>
+          <p><a href="mailto:hello@caferoyalcafe.co.uk">hello@caferoyalcafe.co.uk</a></p>
+          <p style="margin-top:.3rem;font-size:.8rem">We reply within 24 hours</p>
+        </div>
+        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="cic-icon">&#128336;</div>
+          <h3>Opening Hours</h3>
+          <p>Mon–Fri: 7am – 10pm<br />Sat: 8am – 11pm<br />Sun: 9am – 9pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + MAP -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Map -->
+        <div data-aos="fade-right">
+          <h2 class="section-title" style="margin-bottom:1.5rem">Find <span class="gold">Us</span></h2>
+          <div class="map-placeholder">
+            <span>&#128205;</span>
+            <p><strong>Cafe Royal</strong></p>
+            <p>123 Royal Street, London W1A 1AA</p>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:1rem">Open in Google Maps</a>
+          </div>
+          <div style="margin-top:2rem;">
+            <h3 style="font-size:1.15rem;color:var(--burgundy);margin-bottom:1rem">Getting Here</h3>
+            <div style="display:flex;flex-direction:column;gap:.75rem">
+              <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:var(--text-lt)">
+                <span style="flex-shrink:0;font-size:1.1rem">&#128650;</span>
+                <p><strong style="color:var(--text)">By Tube:</strong> Oxford Circus (2 min walk) or Bond Street (5 min walk)</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:var(--text-lt)">
+                <span style="flex-shrink:0;font-size:1.1rem">&#128652;</span>
+                <p><strong style="color:var(--text)">By Bus:</strong> Routes 12, 94 &amp; 139 stop directly outside</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:var(--text-lt)">
+                <span style="flex-shrink:0;font-size:1.1rem">&#128664;</span>
+                <p><strong style="color:var(--text)">By Car:</strong> NCP car park on Cavendish Place (3 min walk)</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;color:var(--text-lt)">
+                <span style="flex-shrink:0;font-size:1.1rem">&#128690;</span>
+                <p><strong style="color:var(--text)">By Bike:</strong> Santander Cycles docking station on Regent Street</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div data-aos="fade-left">
+          <h2 class="section-title" style="margin-bottom:1.5rem">Send a <span class="gold">Message</span></h2>
+          <div class="contact-form-wrap">
+            <form class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Full Name *</label>
+                  <input type="text" id="contactName" name="name" placeholder="Jane Smith" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" name="email" placeholder="jane@example.com" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="+44 7xxx xxxxxx" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject *</label>
+                <select id="contactSubject" name="subject" required>
+                  <option value="">Select a subject…</option>
+                  <option>General Enquiry</option>
+                  <option>Menu / Allergen Question</option>
+                  <option>Private Event / Venue Hire</option>
+                  <option>Feedback or Compliment</option>
+                  <option>Press / Media</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message *</label>
+                <textarea id="contactMessage" name="message" placeholder="Tell us how we can help…" required rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">
+                Send Message &#9993;
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow" style="color:var(--gold)">Reserve Your Spot</p>
+        <h2 style="color:var(--white)">Book a <span class="gold">Table</span></h2>
+        <p style="color:rgba(249,245,238,.7);margin-top:.5rem">We look forward to welcoming you to Cafe Royal</p>
+      </div>
+
+      <div class="booking-form-wrap" data-aos="zoom-in">
+        <div class="booking-note">
+          <span>&#128276;</span>
+          <p>Reservations can be made up to 60 days in advance. For parties of 8 or more, please call us directly on <a href="tel:+442012345678" style="color:var(--gold)">+44 (0)20 1234 5678</a>. We will confirm your booking by email within 2 hours.</p>
+        </div>
+
+        <form class="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingName">Full Name *</label>
+              <input type="text" id="bookingName" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="bookingEmail">Email Address *</label>
+              <input type="email" id="bookingEmail" name="email" placeholder="jane@example.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingPhone">Phone Number *</label>
+              <input type="tel" id="bookingPhone" name="phone" placeholder="+44 7xxx xxxxxx" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="bookingGuests">Number of Guests *</label>
+              <select id="bookingGuests" name="guests" required>
+                <option value="">Select…</option>
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5 guests</option>
+                <option>6 guests</option>
+                <option>7 guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingDate">Preferred Date *</label>
+              <input type="date" id="bookingDate" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="bookingTime">Preferred Time *</label>
+              <select id="bookingTime" name="time" required>
+                <option value="">Select…</option>
+                <optgroup label="Breakfast">
+                  <option>7:00am</option>
+                  <option>7:30am</option>
+                  <option>8:00am</option>
+                  <option>8:30am</option>
+                  <option>9:00am</option>
+                  <option>9:30am</option>
+                  <option>10:00am</option>
+                  <option>10:30am</option>
+                  <option>11:00am</option>
+                </optgroup>
+                <optgroup label="Lunch">
+                  <option>12:00pm</option>
+                  <option>12:30pm</option>
+                  <option>1:00pm</option>
+                  <option>1:30pm</option>
+                  <option>2:00pm</option>
+                  <option>2:30pm</option>
+                </optgroup>
+                <optgroup label="Afternoon">
+                  <option>3:00pm</option>
+                  <option>3:30pm</option>
+                  <option>4:00pm</option>
+                  <option>4:30pm</option>
+                  <option>5:00pm</option>
+                </optgroup>
+                <optgroup label="Dinner">
+                  <option>6:00pm</option>
+                  <option>6:30pm</option>
+                  <option>7:00pm</option>
+                  <option>7:30pm</option>
+                  <option>8:00pm</option>
+                  <option>8:30pm</option>
+                  <option>9:00pm</option>
+                  <option>9:30pm</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bookingOccasion">Special Occasion</label>
+            <select id="bookingOccasion" name="occasion">
+              <option value="">No special occasion</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Business Lunch / Dinner</option>
+              <option>Proposal</option>
+              <option>Baby Shower</option>
+              <option>Other Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingRequests">Special Requests or Dietary Requirements</label>
+            <textarea id="bookingRequests" name="requests" rows="3" placeholder="Allergies, high chair, wheelchair access, birthday cake, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:1rem;padding:1rem 2rem">
+            &#127869; Confirm Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Questions &amp; Answers</p>
+        <h2 class="section-title">Frequently Asked <span class="gold">Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+          <h4>Do you take walk-ins?</h4>
+          <p>Yes! We always keep a number of tables free for walk-in guests. However, booking is recommended, especially on weekends and evenings.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="80">
+          <h4>Is there a cancellation policy?</h4>
+          <p>We ask for 24 hours' notice for cancellations. For groups of 6+, 48 hours' notice is required. No-shows may be charged a £5 per person fee.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="160">
+          <h4>Do you cater for dietary requirements?</h4>
+          <p>Absolutely. Our menu clearly marks vegan (V), vegetarian (VG) and gluten-free (GF) options. Please inform us of any allergies when booking.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="240">
+          <h4>Can I hire the cafe for a private event?</h4>
+          <p>Yes, we offer private hire for groups. Please contact us via phone or email to discuss your requirements and receive a tailored quote.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="320">
+          <h4>Is Cafe Royal child-friendly?</h4>
+          <p>Absolutely! We have a dedicated kids' menu, high chairs available and a warm, welcoming atmosphere for families of all sizes.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+          <h4>Do you have free Wi-Fi?</h4>
+          <p>Yes, complimentary high-speed Wi-Fi is available throughout the cafe. Ask your server for the password.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Cafe Royal" class="footer-logo" />
+          <p>A warm, welcoming space for coffee lovers, food enthusiasts and everyone in between.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">&#9419;</a>
+            <a href="#" class="social-link" aria-label="Instagram">&#9413;</a>
+            <a href="#" class="social-link" aria-label="Twitter">&#9429;</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#booking">Book a Table</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>We Serve</h4>
+          <ul>
+            <li>Fresh Roast Coffee</li>
+            <li>Artisan Cakes</li>
+            <li>French Patisserie</li>
+            <li>Full English Breakfast</li>
+            <li>Gourmet Panini</li>
+            <li>Lunch &amp; Dinner</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <address>
+            <p>123 Royal Street</p>
+            <p>London, W1A 1AA</p>
+            <p><a href="tel:+442012345678">+44 (0)20 1234 5678</a></p>
+            <p><a href="mailto:hello@caferoyalcafe.co.uk">hello@caferoyalcafe.co.uk</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Cafe Royal. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set minimum date for booking to today
+    const dateInput = document.getElementById('bookingDate');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+  </script>
+</body>
+</html>

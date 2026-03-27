@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Cafe Royal</title>
+  <meta name="description" content="Take a visual tour of Cafe Royal – our cosy interior, artisan coffee and beautiful patisserie." />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Gallery-specific lightbox */
+    .lightbox {
+      position: fixed; inset: 0;
+      background: rgba(10,4,6,.92);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2000;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s;
+    }
+    .lightbox.active { opacity: 1; pointer-events: all; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 90vw; max-height: 90vh;
+      background: var(--dark-lt);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,.25);
+    }
+    .lightbox-content {
+      width: 600px; max-width: 90vw;
+      height: 420px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem;
+      padding: 3rem;
+    }
+    .lightbox-icon { font-size: 5rem; }
+    .lightbox-title { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold); }
+    .lightbox-desc  { color: rgba(249,245,238,.7); text-align: center; }
+    .lightbox-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: rgba(255,255,255,.1);
+      border: none; color: var(--white);
+      width: 36px; height: 36px; border-radius: 50%;
+      font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--transition);
+    }
+    .lightbox-close:hover { background: var(--burgundy); }
+    .gallery-filter-bar {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      justify-content: center; margin-bottom: 2.5rem;
+    }
+    .gallery-filter-btn {
+      padding: .55rem 1.4rem;
+      border-radius: 50px;
+      border: 2px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: .88rem; font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .gallery-filter-btn.active,
+    .gallery-filter-btn:hover {
+      background: var(--gold); color: var(--dark);
+    }
+    .gallery-item { cursor: pointer; }
+    .gallery-item[data-cat].hidden { display: none; }
+    .gallery-cat-badge {
+      position: absolute; top: .75rem; left: .75rem;
+      background: var(--burgundy); color: var(--gold);
+      font-size: .7rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .25rem .75rem; border-radius: 50px;
+    }
+    .gallery-item { position: relative; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.svg" alt="Cafe Royal Logo" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="brand-name">Cafe Royal</span>
+          <span class="brand-tagline">Fresh Roast Coffee &amp; Juice</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="index.html#specials" class="nav-link">Specials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html#booking" class="nav-link nav-cta">Book a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">A Visual Journey</p>
+      <h1>Our <span class="gold">Gallery</span></h1>
+      <p style="color:rgba(255,255,255,.7);margin-top:.75rem;font-size:1.1rem">A glimpse into the world of Cafe Royal</p>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <!-- Filter buttons -->
+      <div class="gallery-filter-bar" data-aos="fade-up">
+        <button class="gallery-filter-btn active" data-filter="all">All</button>
+        <button class="gallery-filter-btn" data-filter="coffee">Coffee</button>
+        <button class="gallery-filter-btn" data-filter="food">Food</button>
+        <button class="gallery-filter-btn" data-filter="patisserie">Patisserie</button>
+        <button class="gallery-filter-btn" data-filter="interior">Interior</button>
+        <button class="gallery-filter-btn" data-filter="drinks">Drinks</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-cat="coffee" data-aos="zoom-in" data-aos-delay="0"
+             data-title="Perfect Espresso" data-desc="Our signature single-origin espresso, pulled to perfection every time.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#3B1020,#6B2030)">
+            <div class="g-icon">&#9749;</div>
+            <p>Espresso Art</p>
+          </div>
+          <div class="gallery-cat-badge">Coffee</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="patisserie" data-aos="zoom-in" data-aos-delay="80"
+             data-title="Opera Cake" data-desc="Our signature multi-layered Opera Cake – a labour of love from our patisserie team.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#2C1215,#5C1622)">
+            <div class="g-icon">&#127874;</div>
+            <p>Opera Cake</p>
+          </div>
+          <div class="gallery-cat-badge">Patisserie</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="interior" data-aos="zoom-in" data-aos-delay="160"
+             data-title="Cosy Corner" data-desc="Our favourite window seat – perfect for a quiet coffee and some people-watching.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1A0A0E,#4A1E28)">
+            <div class="g-icon">&#127968;</div>
+            <p>Cosy Interior</p>
+          </div>
+          <div class="gallery-cat-badge">Interior</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="food" data-aos="zoom-in" data-aos-delay="240"
+             data-title="Full English Breakfast" data-desc="The classic Cafe Royal Full English – everything you need to start the day right.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#5C1622,#9B2335)">
+            <div class="g-icon">&#127860;</div>
+            <p>Full English</p>
+          </div>
+          <div class="gallery-cat-badge">Food</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="drinks" data-aos="zoom-in" data-aos-delay="320"
+             data-title="Fresh Juice Bar" data-desc="Cold-pressed juices and smoothies made to order at our dedicated juice bar.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#3B1020,#7B2035)">
+            <div class="g-icon">&#127823;</div>
+            <p>Fresh Juices</p>
+          </div>
+          <div class="gallery-cat-badge">Drinks</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="patisserie" data-aos="zoom-in" data-aos-delay="400"
+             data-title="Morning Croissants" data-desc="Baked fresh every morning – buttery, golden and impossibly flaky.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4A1020,#8B2030)">
+            <div class="g-icon">&#127858;</div>
+            <p>Croissants</p>
+          </div>
+          <div class="gallery-cat-badge">Patisserie</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="coffee" data-aos="zoom-in" data-aos-delay="0"
+             data-title="Latte Art" data-desc="Our baristas take pride in every cup – this rosette latte is a daily ritual for many of our guests.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#2C1215,#6B1F2E)">
+            <div class="g-icon">&#9786;</div>
+            <p>Latte Art</p>
+          </div>
+          <div class="gallery-cat-badge">Coffee</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="food" data-aos="zoom-in" data-aos-delay="80"
+             data-title="Truffle Tagliatelle" data-desc="Our much-loved pasta dish – black truffle cream with wild mushrooms and aged parmesan.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1A0A0E,#5C1622)">
+            <div class="g-icon">&#127869;</div>
+            <p>Truffle Pasta</p>
+          </div>
+          <div class="gallery-cat-badge">Food</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="interior" data-aos="zoom-in" data-aos-delay="160"
+             data-title="The Main Dining Room" data-desc="A warm, intimate space with oak tables, soft lighting and the gentle hum of conversation.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#3B1020,#7B1F2E)">
+            <div class="g-icon">&#127962;</div>
+            <p>Dining Room</p>
+          </div>
+          <div class="gallery-cat-badge">Interior</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="patisserie" data-aos="zoom-in" data-aos-delay="240"
+             data-title="Mille-Feuille" data-desc="Layers of caramelised pastry, crème pâtissière and fresh raspberry – a true French classic.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#5C1015,#9B2030)">
+            <div class="g-icon">&#129361;</div>
+            <p>Mille-Feuille</p>
+          </div>
+          <div class="gallery-cat-badge">Patisserie</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="drinks" data-aos="zoom-in" data-aos-delay="320"
+             data-title="Berry Blast Smoothie" data-desc="Mixed berries, banana, oat milk and raw honey – our most popular smoothie.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4A1020,#8B2035)">
+            <div class="g-icon">&#127827;</div>
+            <p>Berry Smoothie</p>
+          </div>
+          <div class="gallery-cat-badge">Drinks</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="interior" data-aos="zoom-in" data-aos-delay="400"
+             data-title="The Coffee Bar" data-desc="Watch our baristas at work from a front-row seat at the marble-topped bar.">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1A0A0E,#4A1E28)">
+            <div class="g-icon">&#127775;</div>
+            <p>The Coffee Bar</p>
+          </div>
+          <div class="gallery-cat-badge">Interior</div>
+          <div class="gallery-overlay"><span>&#128269;</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&#10005;</button>
+      <div class="lightbox-content" id="lightboxContent">
+        <div class="lightbox-icon" id="lightboxIcon"></div>
+        <div class="lightbox-title" id="lightboxTitle"></div>
+        <div class="lightbox-desc" id="lightboxDesc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM CTA -->
+  <section class="newsletter bg-burgundy section" style="padding:4rem 0">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">&#128247;</div>
+        <h2>Follow Our Story</h2>
+        <p>Share your Cafe Royal moments – tag us <strong>@CafeRoyalLondon</strong> and be featured in our gallery.</p>
+        <a href="#" class="btn btn-gold" style="margin-top:1.5rem">Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Cafe Royal" class="footer-logo" />
+          <p>A warm, welcoming space for coffee lovers, food enthusiasts and everyone in between.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon–Fri: 7am – 10pm</li>
+            <li>Saturday: 8am – 11pm</li>
+            <li>Sunday: 9am – 9pm</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <address>
+            <p>123 Royal Street, London</p>
+            <p><a href="tel:+442012345678">+44 (0)20 1234 5678</a></p>
+            <p><a href="mailto:hello@caferoyalcafe.co.uk">hello@caferoyalcafe.co.uk</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Cafe Royal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery filter
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item[data-cat]');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.cat === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lbIcon   = document.getElementById('lightboxIcon');
+    const lbTitle  = document.getElementById('lightboxTitle');
+    const lbDesc   = document.getElementById('lightboxDesc');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const icon = item.querySelector('.g-icon').textContent;
+        lbIcon.textContent  = icon;
+        lbTitle.textContent = item.dataset.title;
+        lbDesc.textContent  = item.dataset.desc;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
