@@ -1,1 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Royal - Premium Coffee & Dining Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f7f4;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #2c1810 0%, #4a2c1f 100%);
+            color: #f4e4d7;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #f4e4d7;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a2c1f" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23d4af37" opacity="0.1"/><circle cx="900" cy="400" r="150" fill="%23d4af37" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #f4e4d7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #d4af37;
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #f4e4d7;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c1810;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #d4af37;
+            margin: 1rem auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            border-radius: 10px;
+            padding: 4rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+
+        .menu-item h3 {
+            color: #2c1810;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-item-entry {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .menu-item-entry:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .item-price {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: #2c1810;
+            color: #f4e4d7;
+            padding: 5rem 2rem;
+        }
+
+        .gallery h2 {
+            color: #d4af37;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            height: 250px;
+            background: linear-gradient(135deg, #4a2c1f, #6b4423);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #d4af37;
+            transition: transform 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            border-radius: 10px;
+            padding: 4rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            background: #f9f7f4;
+            border-radius: 10px;
+            border: 2px solid #d4af37;
+        }
+
+        .contact-card h3 {
+            color: #2c1810;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-card p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c1810;
+            color: #f4e4d7;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #f4e4d7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">☕ Cafe Royal</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Cafe Royal</h1>
+            <p>Experience the finest coffee and cuisine in an elegant atmosphere</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Cafe Royal</h2>
+        <p>
+            Since 1995, Cafe Royal has been serving the finest artisanal coffee and gourmet cuisine
+            to our cherished guests. Our commitment to quality, sustainability, and exceptional service
+            has made us a beloved destination for coffee enthusiasts and food lovers alike.
+            Every cup is crafted with passion, every dish prepared with care, and every visit
+            is an experience to remember.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Signature Coffees</h3>
+                <div class="menu-item-entry">
+                    <span class="item-name">Royal Espresso</span>
+                    <span class="item-price">$4.50</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Cappuccino Supreme</span>
+                    <span class="item-price">$5.50</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Caramel Macchiato</span>
+                    <span class="item-price">$6.00</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">French Vanilla Latte</span>
+                    <span class="item-price">$5.75</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Mocha Delight</span>
+                    <span class="item-price">$6.25</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Breakfast Specialties</h3>
+                <div class="menu-item-entry">
+                    <span class="item-name">Royal Breakfast Platter</span>
+                    <span class="item-price">$14.95</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Belgian Waffle Stack</span>
+                    <span class="item-price">$12.50</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Eggs Benedict Royale</span>
+                    <span class="item-price">$13.75</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Croissant Sandwich</span>
+                    <span class="item-price">$10.95</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Avocado Toast Deluxe</span>
+                    <span class="item-price">$11.50</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Pastries & Desserts</h3>
+                <div class="menu-item-entry">
+                    <span class="item-name">Chocolate Croissant</span>
+                    <span class="item-price">$4.95</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Blueberry Muffin</span>
+                    <span class="item-price">$3.75</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Tiramisu</span>
+                    <span class="item-price">$7.50</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">New York Cheesecake</span>
+                    <span class="item-price">$6.95</span>
+                </div>
+                <div class="menu-item-entry">
+                    <span class="item-name">Macarons (6 pcs)</span>
+                    <span class="item-price">$8.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">☕ Artisan Coffee</div>
+            <div class="gallery-item">🥐 Fresh Pastries</div>
+            <div class="gallery-item">🍰 Gourmet Desserts</div>
+            <div class="gallery-item">🌅 Cozy Ambiance</div>
+            <div class="gallery-item">👨‍🍳 Master Baristas</div>
+            <div class="gallery-item">🍽️ Fine Dining</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Visit Us Today</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>📍 Location</h3>
+                <p>123 Royal Avenue<br>Downtown District<br>City, State 12345</p>
+            </div>
+            <div class="contact-card">
+                <h3>⏰ Hours</h3>
+                <p>Monday - Friday: 7am - 8pm<br>Saturday - Sunday: 8am - 9pm</p>
+            </div>
+            <div class="contact-card">
+                <h3>📞 Contact</h3>
+                <p>Phone: (555) 123-4567<br>Email: info@caferoyal.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Cafe Royal. All rights reserved.</p>
+        <p>Crafted with passion and dedication</p>
+        <div class="social-links">
+            <a href="#" title="Facebook">Facebook</a>
+            <a href="#" title="Instagram">Instagram</a>
+            <a href="#" title="Twitter">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
